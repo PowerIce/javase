@@ -47,4 +47,37 @@ class Person {
 }
 
 可以定义多个构造方法  用来初始化不同的参数的实例
+
+构造方法使用 this() 即调用性对应的方法
+```
+#### 方法重载
+```
+相同的方法名 入参和功能不同即是方法重载
+例如
+public void setName(String name) {
+    this.name = name;
+}
+public void setName(String name1, String name2) {
+    this.name = name1 + "和" + name2;
+}
+```
+#### 继承
+```
+extends  
+以student为例 继承关系 Object <--- Person <--- Student
+protected 子类无法访问父类的private修饰符  父类使用protected就可以进行访问
+super 超类  有继承的情况下使用super和this都能访问到父类
+子类构造方法会自动调用父类的无参构造方法 如果父类没有默认的构造方法则显式调用super(...args) 
+```
+#### 阻止继承
+```
+从Java 15开始，允许使用sealed修饰class，并通过permits明确写出能够从该class继承的子类名称
+例如  public sealed class Shape permits Rect, Circle, Triangle
+sealed 表示此类是指定继承的  permits 表示能被继承的类有哪些
+```
+#### 向上/下转型
+```
+向上 Person s = new Student() Object o = s
+向下 无法转化实际类型比转化类型高的类  比如 Person p = new Person(); Student s = (Student)p;
+向下转型可以先用instanceof看一下实际类型是否相等 
 ```
