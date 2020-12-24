@@ -1,4 +1,4 @@
-package bing;
+package bing.thebasicstructure;
 
 public class Main {
     public static void main (String[] args) {
