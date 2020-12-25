@@ -28,9 +28,18 @@ public class Main {
 //        AbstractPerson s = new AbstractStudent();
 //        s.run();
         // interface
-        InterfacePerson s = new InterfaceStudent("Bing");
-        s.run();
-        s.getName();
+//        InterfacePerson s = new InterfaceStudent("Bing");
+//        s.run();
+//        s.getName();
+        // default
+//        DefaultPerson s = new DefaultStudent("刘翔");
+//        s.run();
+        // static
+        StaticPerson.number = 99;
+        System.out.println(StaticPerson.number);
+        StaticPerson.setNumber(100);
+        System.out.println(StaticPerson.number);
+
     }
 //    public static double totalTax(Income... incomes) {
 //        double d = 0;

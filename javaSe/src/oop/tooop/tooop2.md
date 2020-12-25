@@ -52,4 +52,26 @@ class Person {
           void run();
           String getName();
       }
+类可以继承多个接口class Student implements ...
+interface 也可以使用extends继承 interface 成为接口扩展
+例如 interface Hello {
+         void hello();
+     }
+     interface Person extends Hello {
+         void run();
+         String getName();
+     }
+```
+#### default
+```
+interface default 方法可以定义操作 和访问interface的方法  可以被继承的类调用default方法
+```
+#### static
+```
+static 的字段可以被实例赋值和获取 
+static 字段是共享的 一个实例更改过   里一个实例也可以获取到 所以，所有实例共享一个静态字段。
+推荐直接用类访问静态字段  例如 Person.number = 99;
+static 方法也痛字段一样 用类访问静态方法 静态方法中无法访问this
+静态方法经常用于工具类 例如 Array.sort(); 静态方法也经常用于辅助方法。注意到Java程序的入口main()也是静态方法。
+接口的静态字段 public static final int MALE = 1; 可以简写成int MALE = 1；使用时可以自动编译完整
 ```
