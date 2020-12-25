@@ -11,28 +11,35 @@ public class Main {
 //        City bj = new City();
 //        bj.setName("小明");
 //        System.out.println(bj.getName());
-        Student s = new Student("kobe", 28, 81);
-        Object obj = "hello";
-        if (obj instanceof String str) {
-            // 可以直接使用变量s:
-            System.out.println(str.toUpperCase());
-        }
-        // 税收
-        Income[] incomes = new Income[] {
-                new Income(5000),
-                new Salary(8000),
-                new StateCouncilSpecialAllowance(15000)
-        };
-        System.out.println(totalTax(incomes));
+//        Student s = new Student("kobe", 28, 81);
+//        Object obj = "hello";
+//        if (obj instanceof String str) {
+//            // 可以直接使用变量s:
+//            System.out.println(str.toUpperCase());
+//        }
+//        // 税收
+//        Income[] incomes = new Income[] {
+//                new Income(5000),
+//                new Salary(8000),
+//                new StateCouncilSpecialAllowance(15000)
+//        };
+//        System.out.println(totalTax(incomes));
+        // abstract
+//        AbstractPerson s = new AbstractStudent();
+//        s.run();
+        // interface
+        InterfacePerson s = new InterfaceStudent("Bing");
+        s.run();
+        s.getName();
     }
+//    public static double totalTax(Income... incomes) {
+//        double d = 0;
+//        for (Income inc : incomes) {
+//            d += inc.getTax();
+//        }
+//        return d;
+//    }
 
-    public static double totalTax(Income... incomes) {
-        double d = 0;
-        for (Income inc : incomes) {
-            d += inc.getTax();
-        }
-        return d;
-    }
 }
 
 class City {
