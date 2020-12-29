@@ -75,3 +75,7 @@ static 方法也痛字段一样 用类访问静态方法 静态方法中无法�
 静态方法经常用于工具类 例如 Array.sort(); 静态方法也经常用于辅助方法。注意到Java程序的入口main()也是静态方法。
 接口的静态字段 public static final int MALE = 1; 可以简写成int MALE = 1；使用时可以自动编译完整
 ```
+#### 包 package
+```
+import 导入某个类   
+```

@@ -1,4 +1,4 @@
-package oop.tooop;
+package oop.tooop.testincome;
 
 class Income {
     protected double income;
@@ -9,6 +9,7 @@ class Income {
         return this.income * 0.1;
     }
 }
+
 class Salary extends Income {
     public Salary (double income) {
         super(income);
@@ -18,6 +19,7 @@ class Salary extends Income {
         return (this.income - 5000) * 0.1;
     }
 }
+
 class StateCouncilSpecialAllowance extends Income {
     public StateCouncilSpecialAllowance (double income) {
         super(income);

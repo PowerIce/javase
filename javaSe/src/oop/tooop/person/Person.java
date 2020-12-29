@@ -1,4 +1,4 @@
-package oop.tooop;
+package oop.tooop.person;
 
 class Person {
     protected String name;
@@ -23,6 +23,7 @@ class Person {
         return age;
     }
 }
+
 class Student extends Person {
     protected int score;
     public Student (String name, int age, int score) {

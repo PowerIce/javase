@@ -4,6 +4,7 @@ interface InterfacePerson {
     void run();
     String getName();
 }
+
 class InterfaceStudent implements InterfacePerson {
     private String name;
     public InterfaceStudent (String name) {

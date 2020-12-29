@@ -21,6 +21,7 @@ class AbstractSalary extends AbstractIncome {
        }
     }
 }
+
 class AbstractStateCouncilSpecialAllowance extends AbstractIncome {
     public AbstractStateCouncilSpecialAllowance (double income) {
         super(income);

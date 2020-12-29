@@ -6,6 +6,7 @@ interface DefaultPerson {
         System.out.println(getName() + "运行DefaultPerson Run方法");
     }
 }
+
 class DefaultStudent implements DefaultPerson {
     private String name;
     public DefaultStudent (String name) {
