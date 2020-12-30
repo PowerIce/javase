@@ -54,4 +54,31 @@ var s = String.join(", ", names);
     System.out.println(Integer.toHexString(100)); // "64",表示为16进制
     System.out.println(Integer.toOctalString(100)); // "144",表示为8进制
     System.out.println(Integer.toBinaryString(100)); // "1100100",表示为2进制
+处理无符号整形  无符号整型就看作是从零开始
+    byte x = -1;
+    byte y = 127;
+    System.out.println(Byte.toUnsignedInt(x)); // 255
+    System.out.println(Byte.toUnsignedInt(y)); // 127
+```
+#### JavaBean
+```
+使用Introspector.getBeanInfo()可以获取属性列表。
+可以枚举javaBean的所有信息
+BeanInfo info = Introspector.getBeanInfo(Person.class);
+for (PropertyDescriptor pd : info.getPropertyDescriptors()) {
+    System.out.println(pd.getName());
+    System.out.println("  " + pd.getReadMethod());
+    System.out.println("  " + pd.getWriteMethod());
+}
+```
+#### 枚举类 enum
+```
+enum 用来枚举常量 例如
+enum Weekday {SUN, MON, TUE, WED, THU, FRI, SAT;}
+enum本身带有类型信息  不同类与enum进行==比较 都会报出类型错误
+例如 if(1 == Weekday.SUN)
+不同类型的枚举类不能相互赋值和比较 因为类型不同
+返回常量名 Weekday.SUN.name(); 此方法不能被覆写
+返回常量顺序 Weekday.SUN.ordinal();
+
 ```

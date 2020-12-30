@@ -1,6 +1,4 @@
-package com.java.lang.stringcode;
-
-import java.util.StringJoiner;
+package com.java.lang.stringcode.teststringbuilder;
 
 public class TestStringBuilder {
     public StringBuilder s = new StringBuilder(1024);

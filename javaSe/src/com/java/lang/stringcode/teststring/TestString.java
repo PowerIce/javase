@@ -1,4 +1,4 @@
-package com.java.lang.stringcode;
+package com.java.lang.stringcode.teststring;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
@@ -27,8 +27,8 @@ public class TestString {
         System.out.println(ss);
         String sjoin = String.join("***", ss);
         System.out.println(sjoin);
-        String s = "Hi %s, your score is %d!";
-        System.out.print(s.formatted("Alice", 80) + "\t");
+//        String s4 = "Hi %s, your score is %d!";
+//        System.out.print(s4.formatted("Alice", 80) + "\t");
         System.out.print(String.format("Hi %s, your score is %.2f!", "Bob", 59.5) + "\t");
         System.out.print(String.valueOf(123) + "\t"); // "123"
         System.out.print(String.valueOf(45.67) + "\t"); // "45.67"
