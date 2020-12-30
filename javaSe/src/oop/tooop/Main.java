@@ -1,5 +1,7 @@
 package oop.tooop;
 
+import oop.tooop.teststatic.StaticPerson;
+
 public class Main {
     public static void main(String[] args) {
 //        Person p = new Person("丽丽", 19);

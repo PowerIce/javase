@@ -78,4 +78,35 @@ static 方法也痛字段一样 用类访问静态方法 静态方法中无法�
 #### 包 package
 ```
 import 导入某个类   
+在写import的时候，可以使用*，表示把这个包下面的所有class都导入进来（但不包括子包的class）
+```
+#### 作用域
+```
+public
+  定义为public的class、interface  可以被其他类和其他包的类访问到
+  定义为public的 字段和方法可以被其他类访问到 首先要有访问权限
+private
+  定义为private的 字段和方法无法被其他类访问到
+  java 支持嵌套类 因此当前类中的嵌套类也可以访问private
+protected
+  protected作用于继承关系  定义为protected的字段和方法可以被子类访问 以及子类的子类
+package
+  包作用域是指一个类允许访问同一个package的没有public、private修饰的class，以及没有public、protected、private修饰的字段和方法。
+  只要在同一个包，就可以访问package权限的class、field和method
+final
+  final可以阻止class被继承 也可以阻止方法被子类覆写 字段不可以重新赋值
+```
+#### 内部类
+```
+匿名类 Anonymous Class
+  不需要明确class 在方法内部通过匿名类定义 
+  例如 Runnable r = new Runnable() {
+              @Override
+              public void run() {
+                  System.out.println("Hello, " + Outer.this.name);
+              }
+          };
+          new Thread(r).start();
+内部类可以访问当前普通类的字段和方法    因为作用域原因 还能够改写普通类的private字段
+静态内部类不再依附普通类的实例   是一个完全独立的类   但因为作用域原因又能访问当前所在普通类的private静态字段和方法
 ```
