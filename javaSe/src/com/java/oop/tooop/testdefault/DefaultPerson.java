@@ -1,4 +1,4 @@
-package oop.tooop;
+package com.java.oop.tooop.testdefault;
 
 interface DefaultPerson {
     String getName();

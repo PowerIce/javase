@@ -1,4 +1,4 @@
-package oop.tooop;
+package com.java.oop.tooop.testinterface;
 
 interface InterfacePerson {
     void run();

@@ -1,6 +1,6 @@
-package oop.tooop;
+package com.java.oop.tooop;
 
-import oop.tooop.teststatic.StaticPerson;
+import com.java.oop.tooop.teststatic.StaticPerson;
 
 public class Main {
     public static void main(String[] args) {

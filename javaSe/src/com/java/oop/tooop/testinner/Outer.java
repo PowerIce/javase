@@ -1,4 +1,4 @@
-package oop.tooop.testinner;
+package com.java.oop.tooop.testinner;
 
 public class Outer {
     private final String name;

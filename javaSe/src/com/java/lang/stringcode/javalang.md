@@ -80,5 +80,21 @@ enum本身带有类型信息  不同类与enum进行==比较 都会报出类型�
 不同类型的枚举类不能相互赋值和比较 因为类型不同
 返回常量名 Weekday.SUN.name(); 此方法不能被覆写
 返回常量顺序 Weekday.SUN.ordinal();
-
+```
+#### BigInteger
+```
+可以模拟很大的整数  不会有限制   但是速度较慢
+可以转换成各种Number类型 
+例如 longValue() longValueExact();
+```
+#### BigDecimal
+```
+可以表示一个任意大小且精度准确的浮点数 
+可以用scale()表示小数位  例如 new BigDecimal("15.245").scale() // 3
+stripTrailingZeros() 去掉末尾的0 例如 12.300 转化为 12.3
+如果scale()返回负数 则表示这个数是整数 且 末尾有两个0
+对BigDecimal做加、减、乘 精度不会丢失   但是除法存在除不尽的情况 所以就要保留小数了
+divideAndRemainder() 做除法冰求出余数 会返回一个长度为2 的数组 一个是商  一个是余数
+BigDecimal 比较使用equals  但是要求数值相等和scale()都相等  // 12.3 与 12.300使用equals是不等的因为scale() 不相等
+必须使用comparTo() 会更具两个值大小返回负数 、0、和正数 分别表示 小于等于和大于
 ```

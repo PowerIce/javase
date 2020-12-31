@@ -1,4 +1,4 @@
-package oop.tooop.testincome;
+package com.java.oop.tooop.testincome;
 
 class Income {
     protected double income;

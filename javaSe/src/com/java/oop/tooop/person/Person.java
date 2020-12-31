@@ -1,4 +1,4 @@
-package oop.tooop.person;
+package com.java.oop.tooop.person;
 
 class Person {
     protected String name;

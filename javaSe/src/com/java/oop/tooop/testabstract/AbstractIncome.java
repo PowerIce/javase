@@ -1,4 +1,4 @@
-package oop.tooop;
+package com.java.oop.tooop.testabstract;
 
 abstract class AbstractIncome {
     protected double income;

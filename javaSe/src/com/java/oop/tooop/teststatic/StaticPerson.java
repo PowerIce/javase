@@ -1,4 +1,4 @@
-package oop.tooop.teststatic;
+package com.java.oop.tooop.teststatic;
 
 public class StaticPerson {
     public static int number;

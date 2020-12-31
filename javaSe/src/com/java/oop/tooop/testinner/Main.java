@@ -1,4 +1,4 @@
-package oop.tooop.testinner;
+package com.java.oop.tooop.testinner;
 
 public class Main {
     public static void main(String[] args) {
