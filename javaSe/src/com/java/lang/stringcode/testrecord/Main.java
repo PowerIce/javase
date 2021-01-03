@@ -1,19 +1,21 @@
 package com.java.lang.stringcode.testrecord;
 
+import java.awt.*;
+
 public class Main {
     public static void main(String[] args) {
-        Point p = new Point(123, 456);
-        System.out.println(p.x());
-        System.out.println(p.y());
-        System.out.println(p);
-        System.out.println(p.of(11,52));
+//        Point p = new Point(123, 456);
+//        System.out.println(p.x());
+//        System.out.println(p.y());
+//        System.out.println(p);
+//        System.out.println(p.of(11,52));
     }
 }
-record Point (int x, int y) {
-    public static Point of () {
-        return new Point(0, 0);
-    }
-    public static Point of (int x, int y) {
-        return new Point(x, y);
-    }
-}
+//record Point (int x, int y) {
+//    public static Point of () {
+//        return new Point(0, 0);
+//    }
+//    public static Point of (int x, int y) {
+//        return new Point(x, y);
+//    }
+//}
