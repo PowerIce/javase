@@ -29,3 +29,80 @@ finally是无论前面有多少个catch无论是否异常 处理完都要到fina
      }
 
 ```
+
+#### NullPointerException (空指针异常)
+```
+对象为null 访问这个方法或者字段会产生NullpointerException 由JVM抛出
+严禁使用catch来隐藏这个错误
+```
+#### 断言
+```
+assert 如果断言后面语句为false  程序会抛出AssertionError异常    也可以自定义添加断言消息
+例如 assert x >=0 : "x must >=0"
+断言不能用于可恢复的程序错误中
+```
+#### JDK Logging
+```
+java JDK日志级别为7个 从严重到普通 
+SEVERE
+WARNING
+INFO
+CONFIG
+FINE
+FINER
+FINEST
+
+INFO以下级别的日志不会被打印出来
+```
+#### Commons Logging
+```
+Commons Logging 定义6个级别
+FATAL
+ERROR
+WARNING
+INFO
+DEBUG
+TRACE
+使用实例  Log log = LogFactory.getLog(Main.class);
+实例变量log获取方式是LogFactory.getLog(getClass())   这样可以保证子类也能直接使用改log实例
+例如 public class Person {
+       protected final Log log = LogFactory.getLog(getClass());
+     
+         void foo() {
+             log.info("foo");
+         }
+     }
+     public class Student extends Person {
+         void bar() {
+             log.info("bar");
+         }
+     }
+此外 Commons Logging还提供重载方法 
+例如  try {
+          ...
+      } catch (Exception e) {
+          log.error("got exception!", e);
+      }
+```
+#### Log4j
+```
+Log4j可以吧日志输入到不同地方 
+例如  console：输出到屏幕；
+     file：输出到文件；
+     socket：通过网络输出到远程计算机；
+     jdbc：输出到数据库
+```
+#### SLF4j 和 logback
+```
+这两个是与Commons Logging 、Log4j相互竞争的开源库
+例如  
+Commons Logging的写法  
+int score = 99;
+p.setScore(score);
+log.info("Set score " + score + " for Person " + p.getName() + " ok.");
+
+SLF4J的写法  
+int score = 99;
+p.setScore(score);
+logger.info("Set score {} for Person {} ok.", score, p.getName());
+```
